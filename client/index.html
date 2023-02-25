@@ -37,7 +37,23 @@
             <div><a class="nav-link" href="#">Contact</a></div>
             <div class="navicon"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
             <div class="navicon"><a href="#"><i class="fa-solid fa-bell"></i></a></div>
-            <div class="btn" onclick="location.href='signup.html'">Login/Signup</div>
+            <!-- <div class="btn" onclick="location.href='signup.html'">Login/Signup</div> -->
+            <div id="profile">
+                <div id="profile-img">
+                    <img src="images/self.jpg">
+                </div>
+                <div id="profile-name">Niladri</div>
+                <button class="btn-arrow"><i class="fa-solid fa-angle-down"></i></button>
+                <div id="profile-card">
+                    <div id="profile-card-img"><img src="images/self.jpg"></div>
+                    <div id="profile-card-name"><h4>Niladri Adhikary</h4></div>
+                    <div id="profile-card-email"><p>rickyrickado14@gmail.com</p></div>
+                    <div>
+                        <button type="button" onclick="location.href='profile.html'">Profile Dashboard</button>
+                        <button type="button">Log Out</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -48,10 +64,10 @@
             <button onclick="location.href='#search'">Search Items</button>
         </div>
         <div id="header-img">
-            <img src="images/header-img-min.png" height="300px" width="300px">
+            <img src="images/header-img.png" height="300px" width="300px">
         </div>
     </section>
-    
+
     <section id="categories">
         <div class="category"><img src="images/fish-min.png" alt="" height="140px" width="140px"><p>Fishes</p></div>
         <div class="category"><img src="images/fruit-min.png" alt="" height="140px" width="140px"><p>Fruits</p></div>
@@ -67,21 +83,18 @@
             <div id="location">
                 <i class="fa-solid fa-location-dot"></i>Kolkata
             </div>
-            <div id="search-side">
-                <span id="drop-icon"><i class="fa-solid fa-caret-down"></i></span>
-                <span id="search-divider">|</span>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search for food items...">
-                <div id="arrow-downBox"></div>
-            </div>
+                <div id="search-side">
+                    <span id="search-divider">|</span>
+                     <i class="fa-solid fa-magnifying-glass"></i>
+                     <input type="text" placeholder="Search for food items">
+                 </div>
         </div>
         <div id="filter">
-            <div class="filter-box"><span>Filter</span><i class="fa-solid fa-angle-down"></i></div>
-            <div class="filter-box"><span>Ratings</span><i class="fa-solid fa-angle-down"></i></div>
-            <div class="filter-box"><span>Category</span><i class="fa-solid fa-angle-down"></i></div>
-            <div class="filter-box"><span>Price</span><i class="fa-solid fa-angle-down"></i></div>
+            <div class="filter-box">Filter</div>
+            <div class="filter-box">Ratings</div>
+            <div class="filter-box">Category</div>
+            <div class="filter-box">Prize</div>
         </div>
-      </div>  
         <div id="cards">
             <div class="card">
                 <img src="images/apple-min.png">
