@@ -7,8 +7,8 @@ const colors= require('colors')
 const userRoutes= require('./routes/userRoutes')
 const parse= require('body-parser')
 const { notfound, errorhandler } = require('./middlewares/errorHandler');
-const {authUser} = require('./controllers/Con_controller')
-const seller= require('./routes/sellerRoutes')
+const {authUser} = require('./controllers/Con_Controller')
+const seller= require('./routes/sellerRoute')
 dotenv.config()
 connectDb()
 const app = express();
@@ -40,6 +40,9 @@ app.get('/order-confirmation', (req, res) => {
 });
 app.get('/checkout', (req, res) => {
     res.render(path.join(__dirname, '../client', 'checkout.ejs'));
+});
+app.get('/product-file', (req, res) => {
+    res.render(path.join(__dirname, '../client', 'product-file.ejs'));
 });
 //Register user
 app.use('/api/consumer',userRoutes)
