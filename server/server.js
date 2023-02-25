@@ -4,11 +4,11 @@ const express = require('express');
 const dotenv= require('dotenv')
 const connectDb= require('./config/Database')
 const colors= require('colors')
-const userRoutes= require('./routes/userRoutes')
+//const userRoutes= require('./routes/userRoutes')
 const parse= require('body-parser')
 const { notfound, errorhandler } = require('./middlewares/errorHandler');
-const {authUser} = require('./controllers/Con_Controller')
-const seller= require('./routes/sellerRoute')
+//const {authUser} = require('./controllers/Con_Controller')
+//const seller= require('./routes/sellerRoute')
 dotenv.config()
 connectDb()
 const app = express();
@@ -29,10 +29,10 @@ app.get('/', (req, res) => {
 app.get('/cart', (req, res) => {
     res.render(path.join(__dirname, '../client', 'cart.ejs'));
 });
-app.get('/profile', (req, res) => {
+/*app.get('/profile', (req, res) => {
     res.render(path.join(__dirname, '../client', 'profile.ejs'));
 });
-app.get('/profile-seller', (req, res) => {
+/*app.get('/profile-seller', (req, res) => {
     res.render(path.join(__dirname, '../client', 'profile-seller.ejs'));
 });
 app.get('/order-confirmation', (req, res) => {
@@ -44,7 +44,7 @@ app.get('/checkout', (req, res) => {
 //Register user
 app.use('/api/consumer',userRoutes)
 //add to cart
-app.use('/api',seller)
+app.use('/api',seller)*/
 //middlewares for error Handling
 app.use(notfound)
 app.use(errorhandler)
