@@ -4,10 +4,10 @@ const express = require('express');
 const dotenv= require('dotenv')
 const connectDb= require('./config/Database')
 const colors= require('colors')
-//const userRoutes= require('./routes/userRoutes')
+const userRoutes= require('./routes/userRoutes')
 const parse= require('body-parser')
 const { notfound, errorhandler } = require('./middlewares/errorHandler');
-//const {authUser} = require('./controllers/Con_Controller')
+const {authUser} = require('./controllers/Con_controller')
 //const seller= require('./routes/sellerRoute')
 dotenv.config()
 connectDb()
@@ -40,11 +40,11 @@ app.get('/order-confirmation', (req, res) => {
 });
 app.get('/checkout', (req, res) => {
     res.render(path.join(__dirname, '../client', 'checkout.ejs'));
-});
+});*/
 //Register user
 app.use('/api/consumer',userRoutes)
 //add to cart
-app.use('/api',seller)*/
+//app.use('/api',seller)
 //middlewares for error Handling
 app.use(notfound)
 app.use(errorhandler)
