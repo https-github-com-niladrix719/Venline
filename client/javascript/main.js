@@ -1,5 +1,3 @@
-
-
 // navbar
 
 const navbar = document.getElementById('navbar');
@@ -69,6 +67,8 @@ dropProfile.addEventListener('click', function () {
     else
         profile.style.display = 'none';
 });
+
+//user Profile data showing in navbar
 
 const user = JSON.parse(localStorage.getItem('user'));
 const profileCard = `
