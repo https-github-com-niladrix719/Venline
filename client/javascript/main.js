@@ -42,46 +42,21 @@ arrow_down.addEventListener('click', function (event) {
         arrow_box.style.display = 'none';
 });
 
-//profile
+//location detection
 
-let dropProfile = document.querySelector('#profile i');
-let profile = document.getElementById('profile-card');
+const city = document.getElementById('city');
 
-dropProfile.addEventListener('click', function () {
-    if (profile.style.display == 'none')
-        profile.style.display = 'flex';
-    else
-        profile.style.display = 'none';
+arrow_box.addEventListener('click',function(){
+    const successfulLookup = (position) => {
+            const { latitude, longitude } = position.coords;
+            fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=6fb98deaf8b54d719c0330a5a44a6ac3`)
+                .then(response => response.json())
+                .then(data => {
+                localStorage.setItem('city', (data.results[0].components.city));
+        })
+        };
+    navigator.geolocation.getCurrentPosition(successfulLookup, console.log);
 });
 
-//user Profile data showing in navbar
-
-const user = JSON.parse(localStorage.getItem('user'));
-
-// after log in
-
-if(localStorage.getItem('user')){
-    const profileCard = `
-                    <div id="profile-card-img"></div>
-                    <div id="profile-card-name"><h4>${user.username}</h4></div>
-                    <div id="profile-card-email"><p>${user.email}</p></div>
-                    <div>
-                        <button type="button" onclick="location.href='profile.html'">Profile Dashboard</button>
-                        <button type="button" onclick="logOut()">Log Out</button>
-                    </div>
-`;
-    document.getElementById('profile-card').innerHTML = profileCard;
-    document.getElementById('profile-name').innerHTML = `<h5>${user.username}</h5>`;
-    document.getElementById('login-signup-btn').style.display = 'none';
-    document.getElementById('profile').style.display = 'block';
-}
-
-//log out
-
-function logOut(){
-    localStorage.removeItem('user');
-    document.getElementById('profile-card').innerHTML = ``;
-    document.getElementById('profile-name').innerHTML = ``;
-    document.getElementById('profile').style.display = 'none';
-    document.getElementById('login-signup-btn').style.display = 'block';
-}
+const cityName = localStorage.getItem('city');    
+city.innerHTML = `${cityName}`;

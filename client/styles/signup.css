@@ -1,8 +1,14 @@
+body
+{
+/*	background-image: url(bg.png);*/
+	background-repeat: no-repeat;
+}
 
 
 #signup
 {
-	margin-top: 50px;
+/*	margin-left: 100px;*/
+/*	margin-top: 70px;*/
 	text-align: center;
 }
 
@@ -40,7 +46,6 @@
 	width: 131px;
 	margin-bottom: -10px;
 }
-
 #or
 {
 	display: inline-block;
