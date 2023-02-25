@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles/global.css">
+    <link rel="stylesheet" type="text/css" href="styles/gobal.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <script src="https://kit.fontawesome.com/9b7f16bc1d.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/9b7f16bc1d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -16,26 +16,26 @@
 
     <!-- back-ground Animation -->
     <div class="back-animation">
-        <img src="images/leaf.png" alt="leaf" height="195px" width="195px">
+        <img src="images/leaf-min.png" alt="leaf" height="195px" width="195px">
     </div>
     <div class="back-animation">
     </div>
     <div class="back-animation">
-        <img src="images/tomato.png" alt="tomato" height="195px" width="195px">
+        <img src="images/tomato-min.png" alt="tomato" height="195px" width="195px">
     </div>
 
     <!-- Navbar -->
-    <main>
+  <main>
     <nav id="navbar">
         <div id="logo">
-            <img src="images/venline.png" height="50px" width="200px">
+            <img src="images/vinline.png" height="50px" width="200px">
         </div>
         <div id="navigation">
             <div><a class="nav-link" href="#">Home</a></div>
             <div><a class="nav-link" href="#">Blog</a></div>
             <div><a class="nav-link" href="#about">About</a></div>
             <div><a class="nav-link" href="#">Contact</a></div>
-            <div class="navicon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            <div class="navicon"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
             <div class="navicon"><a href="#"><i class="fa-solid fa-bell"></i></a></div>
             <div class="btn" onclick="location.href='signup.html'">Login/Signup</div>
         </div>
@@ -44,62 +44,74 @@
     <section id="header">
         <div id="header-text">
             <h1>Get Food At Your Door Step At Lowest Price!</h1>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod bhaiya mere mu se nikal gaii
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veni mai mer hi jayoon ga</h3>
+            <h3>Welcome to our online marketplace, where you can shop from the comfort of your own home while supporting local vendors in your community! Our platform connects you directly with a wide variety of vendors, each offering their unique products and services for sale.</h3>
             <button onclick="location.href='#search'">Search Items</button>
         </div>
         <div id="header-img">
-            <img src="images/header-img.png" height="300px" width="300px">
+            <img src="images/header-img-min.png" height="300px" width="300px">
         </div>
     </section>
     
     <section id="categories">
-        <div class="category"><img src="images/fish.png" alt="" height="140px" width="140px"><p>Fishes</p></div>
-        <div class="category"><img src="images/fruit.png" alt="" height="140px" width="140px"><p>Fruits</p></div>
-        <div class="category"><img src="images/milk.png" alt="" height="140px" width="140px"><p>Milk</p></div>
-        <div class="category"><img src="images/vegetable.png" alt="" height="140px" width="140px"><p>Vegetables</p></div>
-        <div class="category"><img src="images/egg.png" alt="" height="140px" width="140px"><p>Eggs</p></div>
-        <div class="category"><img src="images/meat.png" alt="" height="140px" width="140px"><p>Meat</p></div>
+        <div class="category"><img src="images/fish-min.png" alt="" height="140px" width="140px"><p>Fishes</p></div>
+        <div class="category"><img src="images/fruit-min.png" alt="" height="140px" width="140px"><p>Fruits</p></div>
+        <div class="category"><img src="images/milk-min.png" alt="" height="140px" width="140px"><p>Diary</p></div>
+        <div class="category"><img src="images/vegetable-min.png" alt="" height="140px" width="140px"><p>Vegetables</p></div>
+        <div class="category"><img src="images/egg-min.png" alt="" height="140px" width="140px"><p>Eggs</p></div>
+        <div class="category"><img src="images/meat-min.png" alt="" height="140px" width="140px"><p>Meat</p></div>
     </section>
 
     <section id="search">
+      <div id="search-main">  
         <div id="search-bar">
             <div id="location">
                 <i class="fa-solid fa-location-dot"></i>Kolkata
             </div>
-                <div id="search-side">
-                    <span id="search-divider">|</span>
-                     <i class="fa-solid fa-magnifying-glass"></i>
-                     <input type="text" placeholder="Search for food items">
-                 </div>
+            <div id="search-side">
+                <span id="drop-icon"><i class="fa-solid fa-caret-down"></i></span>
+                <span id="search-divider">|</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for food items...">
+                <div id="arrow-downBox"></div>
+            </div>
         </div>
         <div id="filter">
-            <div class="filter-box">Filter</div>
-            <div class="filter-box">Ratings</div>
-            <div class="filter-box">Category</div>
-            <div class="filter-box">Prize</div>
+            <div class="filter-box"><span>Filter</span><i class="fa-solid fa-angle-down"></i></div>
+            <div class="filter-box"><span>Ratings</span><i class="fa-solid fa-angle-down"></i></div>
+            <div class="filter-box"><span>Category</span><i class="fa-solid fa-angle-down"></i></div>
+            <div class="filter-box"><span>Price</span><i class="fa-solid fa-angle-down"></i></div>
         </div>
+      </div>  
         <div id="cards">
             <div class="card">
-                <img src="images/apple.png">
+                <img src="images/apple-min.png">
+                <div class="card-body">
                 <div class="name">Example Name</div>
                 <div class="description"><p>Lorem ipsumid est laborum.</p></div>
                 <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
-                <div class="prize">Rs. 50 / KG</div>
+                <div class="price">Rs. 40 / KG</div>
+                <div class="add2cart">Add to Cart</div>
+                </div>
             </div>
             <div class="card">
-                <img src="images/tomato2.png">
+                <img src="images/tomato2-min.png">
+                <div class="card-body">
                 <div class="name">Example Name</div>
                 <div class="description"><p>Lorem ipsumid est laborum.</p></div>
                 <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
-                <div class="prize">Rs. 50 / KG</div>
+                <div class="price">Rs. 50 / KG</div>
+                <div class="add2cart">Add to Cart</div>
+                </div>
             </div>
             <div class="card">
-                <img src="images/broccoli.png">
+                <img src="images/broccoli-min.png">
+                <div class="card-body">
                 <div class="name">Example Name</div>
                 <div class="description"><p>Lorem ipsumid est laborum.</p></div>
                 <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
-                <div class="prize">Rs. 50 / KG</div>
+                <div class="price">Rs. 50 / KG</div>
+                <div class="add2cart">Add to Cart</div>
+                </div>
             </div>
         </div>    
     </section>
@@ -110,16 +122,16 @@
             <div class="provide-card cardcolor">
                 <div class="provide-logo"><i class="fa-solid fa-person-walking-luggage logowhite i"></i></div>
                 <h3>Benefits for Seller</h3>
-                <h4 class="logowhite i"><i class="fa-solid fa-chevron-right logowhite i"></i> Lorem ipsum</h4>
-                <h4 class="logowhite i"><i class="fa-solid fa-chevron-right logowhite i"></i> Lorem ipsum</h4>
-                <h4 class="logowhite i"><i class="fa-solid fa-chevron-right logowhite i"></i> Lorem ipsum</h4>
+                <h4 class="logowhite i"><i class="fa-solid fa-circle logowhite i sm"></i> <span>it to make a type specimen book. It has survived not only five centuries</spa></h4>
+                <h4 class="logowhite i"><i class="fa-solid fa-circle logowhite i sm"></i> <span>it to make a type specimen book. It has survived not only five centuries</span></h4>
+                <h4 class="logowhite i"><i class="fa-solid fa-circle logowhite i sm"></i> <span>it to make a type specimen book. It has survived not only five centuries</span></h4>
             </div>
             <div class="provide-card">
                 <div class="provide-logo"><i class="fa-solid fa-person-military-pointing i"></i></div>
                 <h3>Benefits for Customer</h3>
-                <h4 class="i"><i class="fa-solid fa-chevron-right i"></i> Lorem ipsum</h4>
-                <h4 class="i"><i class="fa-solid fa-chevron-right i"></i> Lorem ipsum</h4>
-                <h4 class="i"><i class="fa-solid fa-chevron-right i"></i> Lorem ipsum</h4>
+                <h4 class="i"><i class="fa-solid fa-circle i sm"></i> <span>it to make a type specimen book. It has survived not only five centuries</span></h4>
+                <h4 class="i"><i class="fa-solid fa-circle i sm"></i> <span>it to make a type specimen book. It has survived not only five centuries</span></h4>
+                <h4 class="i"><i class="fa-solid fa-circle i sm"></i> <span>it to make a type specimen book. It has survived not only five centuries</span></h4>
             </div>
         </div>
     </section>
@@ -130,14 +142,15 @@
         <h1>About Us</h1>
         <div id="about-body">
             <div id="about-img">
-                <img src="images/panda.png" alt="selling" height="395px" width="395px">
+                <img src="images/panda-min.png" alt="selling" height="395px" width="395px">
             </div>
-            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            <div id="about-text">
+            <h3>Our marketplace showcases the latest and greatest products from our featured vendors, with easy-to-navigate categories for everything from fresh produce and handmade crafts to specialty goods and personal services. You can browse each vendor's storefront to see their full range of products and learn more about their background and story.</h3>
+            <h3>Join our community and experience the joy of supporting local vendors while enjoying the convenience of online shopping. Browse our selection of high-quality products, connect with vendors, and discover something new today!</h3>
+            </div>
         </div>
     </section>
-    </main>
+  </main>
 
     <script type="text/javascript" src="javascript/main.js"></script>
 </body>
