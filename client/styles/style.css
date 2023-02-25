@@ -138,6 +138,7 @@ section{
 	display: flex;
 	justify-content: space-around;
 	flex-direction: row;
+	background-color: white;
 }
 
 #header h1{
@@ -239,6 +240,7 @@ section{
 	box-shadow: 0px 2px 8px 0px #c7c7c7;
 	transition: 0.15 ease-in-out;
 	cursor: pointer;
+	transition: 0.1s ease-in-out;
 }
 
 .category:hover{
