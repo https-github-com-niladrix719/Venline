@@ -13,74 +13,6 @@ main{
     flex-direction: column;
 }
 
-/*navbar*/
-
-#navbar{
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 1.5rem;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: 100;
-    color: #696969;
-}
-
-nav > div{
-    display: inline-block;
-    font-size: 1.1rem;
-}
-
-.nav-move{
-    box-shadow: 0px 0px 10px 0px grey;
-    background-color: white;
-}
-
-#navigation{
-    display: flex;
-    align-items: center;
-}
-
-/*navbar links*/
-
-#navigation > div{
-    width: 5rem;
-}
-
-.nav-link{
-    color: black;
-    text-decoration: none;
-    transition: 0.25s ease-in-out;
-    color: #696969;
-    font-weight: 500
-}
-
-.nav-link:hover{
-    color: red;
-}
-
-#navigation .btn{
-    width: 8rem;
-    height: 1.3rem;
-    cursor: pointer;
-}
-
-.navicon{
-    width: 3.5rem !important;
-}
-
-.navicon i{
-    color: black;
-}
-
-@media screen and (max-width: 720px){
-    #navigation{
-        display: none;
-    }
-}
-
 
 /*listing*/
 
@@ -121,10 +53,11 @@ nav > div{
 
 .seperation-line
 {
-    margin-top: 10px;
-    margin-left: 5px;
+    margin-top: 4px;
+    margin-left: 10px;
+    margin-bottom: 4px;
     border-top: 1.5px solid grey;
-    width: 85%;
+    width: 83%;
 }
 
 .product
@@ -132,7 +65,6 @@ nav > div{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 8px;
     transition: 0.3s ease-in-out;
     height: auto;
     width: 85%;
@@ -231,6 +163,7 @@ nav > div{
 
 .minus-icon, .plus-icon
 {
+    cursor: pointer;
     padding: 1px;
     padding-left: 3.5px;
     font-size: 15px;
@@ -322,6 +255,7 @@ input:focus
 
 #coupon-submit
 {
+    cursor: pointer;
     border: 0;
     width: 35.9%;
     height: 39px;
@@ -368,6 +302,7 @@ input:focus
 
 #order
 {
+    cursor: pointer;
     padding-top: 11.5px;
     display: flex;
     justify-content: space-around;
