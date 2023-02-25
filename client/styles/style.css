@@ -109,7 +109,7 @@ main{
 	border-radius: 30% 40% 88% 12%;
 	animation: move 2s alternate infinite;
 	opacity: 0.4;
-	z-index: 99;
+	z-index: 97;
 }
 
 /*navbar*/
@@ -195,16 +195,16 @@ section{
 /*header*/
 
 #header{
-	margin-top: 1.85rem;
-	height: 24rem;
+	margin-top: 1.5rem;
+	height: 20rem;
 	width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	flex-direction: row;
 }
 
 #header h1{
-	font-size: 2.75rem;
+	font-size: 2.05rem;
 	font-weight: 500;
 }
 
@@ -218,7 +218,7 @@ section{
 
 #header-text{
 	width: 50%;
-	padding-left: 5rem;
+	padding-left: 6.5rem;
 }
 
 #header-text button{
@@ -237,7 +237,7 @@ section{
 }
 
 #header-img{
-	width: 30%;
+	width: 25%;
 }
 
 @media screen and (max-width: 978px){
@@ -274,7 +274,10 @@ section{
 	flex-wrap: wrap;
 	height: auto;
 	padding: 1.5rem;
-	padding-bottom: 3rem;
+	padding-top: 0.5rem;
+	padding-bottom: 2.5rem;
+	margin-bottom: 1.5rem;
+	z-index: 98;
 }
 
 .category{
@@ -319,7 +322,6 @@ section{
 }
 
 #search-bar{
-	margin-top: 2rem;
 	margin-bottom: 1.5rem;
 	box-shadow: 0px 2px 8px 0px #c7c7c7;
 	padding: 0.5rem;
@@ -372,6 +374,9 @@ section{
 #drop-icon{
 	position: relative;
 	right: 20px;
+}
+
+#drop-icon i{
 	cursor: pointer;
 }
 
@@ -414,13 +419,15 @@ section{
 	position: relative;
 	top: 2px;
 	cursor: pointer;
+	font-size: 0.85rem;
 }
 
 .filter-box{
-	height: 1.75rem;
+	height: 1.4rem;
 	color: #696969;
 	text-align: center;
-	width: 5rem;
+	font-size: 0.85rem;
+	width: 4.5rem;
 	border-radius: 0.5rem;
 	border: 1px solid #a9a3a3;
 	padding: 0.25rem;
@@ -447,31 +454,32 @@ section{
 }
 
 .card{
-	height: 25rem;
+	height: 24.5rem;
 	width: 20rem;
 	border-radius: 1rem;
 	position: relative;
 	background-color: white;
-	border: 7.5px white solid;
+	border: 7px white solid;
 	z-index: 98;
-}
-
-.card:hover{
 	box-shadow: 0px 2px 8px 0px #c7c7c7;
 }
 
 .card img{
-	height: 70%;
+	height: 68%;
 	width: 100%;
 	border-radius: 1rem;
 }
 
+.card-body{
+	position: relative;
+}
+
 .rating{
 	font-weight: 400;
-	font-size: 0.9rem;
-	height: 1rem;
-	width: 2.75rem;
-	background-color: #188718;
+	font-size: 0.85rem;
+	height: 0.95rem;
+	width: 2.7rem;
+	background-color: #278d27;
 	text-align: center;
 	color: white;
 	border-radius: 0.5rem;
@@ -482,7 +490,7 @@ section{
 }
 
 .rating i{
-	font-size: 0.6rem;
+	font-size: 0.5rem;
 	position: relative;
 	bottom: 2px;
 	color: white;
@@ -496,6 +504,7 @@ section{
 .description{
 	font-weight: 0;
 	color: #868686;
+	margin-bottom: 1rem;
 }
 
 .price{
@@ -506,6 +515,7 @@ section{
 	padding: 0.5rem;
 	box-sizing: border-box;
 	display: inline-block;
+	border-radius: 0.25rem;
 }
 
 .add2cart{
@@ -514,6 +524,8 @@ section{
 	border: 1px solid #696969;
 	font-weight: 100;
 	margin-left: 0.5rem;
+	border-radius: 0.25rem;
+	cursor: pointer;
 }
 
 /*provide section*/
@@ -537,7 +549,7 @@ section{
 }
 
 .provide-card{
-	height: 22rem;
+	height: auto;
 	width: 30rem;
 	box-sizing: border-box;
 	padding: 2rem;
@@ -610,7 +622,7 @@ section{
 	margin-right: auto;
 }
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 1020px){
     #wave{
     	display: none;
     }
@@ -632,12 +644,15 @@ section{
 	color: white;
 }
 
+#about-text{
+	width: 60%;
+}
+
 #about h3{
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	font-weight: 400;
 	line-height: 1.75rem;
 	word-spacing: 0.35rem;
-	width: 45%;
 	display: inline-block;
 	vertical-align: top;
 	color: white;
@@ -655,7 +670,7 @@ section{
     width: 50%;
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 1020px){
 	#about-img{
 		display: none;
 	}
