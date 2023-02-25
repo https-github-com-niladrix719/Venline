@@ -1,3 +1,4 @@
+
 body
 {
 	margin: 0;
@@ -117,6 +118,7 @@ input:focus {
     color: white;
 	background-color: var(--primary-color);
 	transition: 0.3s ease-in-out;
+	cursor: pointer;
 }
 
 #order:hover
@@ -134,6 +136,7 @@ input:focus {
 	border: 1.5px solid #E1E1E1;
 	border-radius: 4px;
 	padding-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 #right h3
@@ -236,3 +239,15 @@ input:focus {
     	width: 100%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
