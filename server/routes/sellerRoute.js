@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {createSeller,authseller} = require('../controllers/sellercontroller');
-const{ createProduct}=require('../controllers/productcontroller')
+const {createSeller,authseller} = require('../controllers/seller_controller');
+const{ createProduct}=require('../controllers/product_controller')
 
 // Create a new seller
 router.post('/seller', createSeller);
