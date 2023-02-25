@@ -1,5 +1,5 @@
 const Cart = require('../models/cartSchema');
-
+const asyncHandler = require('express-async-handler');
 // Add an item to the cart
 const addToCart = async (req, res) => {
   try {
@@ -29,15 +29,11 @@ const addToCart = async (req, res) => {
 };
 
 // Get the current user's cart
-const getCart = async (req, res) => {
-  try {
+const getCart = asyncHandler(async (req, res) => {
     const cart = await Cart.findOne({ user: req.user._id }).populate('items.productId');
     res.json(cart);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Server Error');
-  }
-};
+  });
+  
 
 // Remove an item from the cart
 const removeFromCart = async (req, res) => {
