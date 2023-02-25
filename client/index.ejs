@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD:client/index.html
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles/gobal.css">
-=======
     <title>Venline</title>
     <link rel="stylesheet" type="text/css" href="styles/global.css">
->>>>>>> c46493d7298a205ae966960b2d7ebb5959253eff:client/index.ejs
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 	<script src="https://kit.fontawesome.com/9b7f16bc1d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,13 +53,22 @@
       <div id="search-main">
         <div id="search-bar">
             <div id="location">
-                <i class="fa-solid fa-location-dot"></i>Kolkata
+                <i class="fa-solid fa-location-dot"></i><span id="city">Kolkata </span>
             </div>
-                <div id="search-side">
-                    <span id="search-divider">|</span>
-                     <i class="fa-solid fa-magnifying-glass"></i>
-                     <input type="text" placeholder="Search for food items">
-                 </div>
+
+            <div id="search-side">
+                <span id="drop-icon"><button class="btn-arrow"><i class="fa-solid fa-caret-down"></i></button></span>
+                <span id="search-divider">|</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for food items...">
+                <div id="arrow-downBox">
+                    <div id="detect">
+                        <i class="fa-solid fa-location-crosshairs" style="color: red !important;"></i>
+                        <p>Detect Your Current Location</p>
+                    </div>
+                    <p>Using GPS</p>
+                </div>
+            </div>
         </div>
         <div id="filter">
             <div class="filter-box">Filter</div>
@@ -140,10 +144,10 @@
     </section>
 
     <%- include('include/footer') %>
+
   </main>
 
     <script type="text/javascript" src="javascript/main.js"></script>
     <script type="text/javascript" src="javascript/navbar.js"></script>
-
 </body>
 </html>
