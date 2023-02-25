@@ -8,9 +8,9 @@ form.addEventListener('submit',function(event){
     const phone = formData.get('phone')
     const user = {
         username,
-        email,
         password,
         phone,
+        email,
     }
     fetch('/api/consumer', {
         method: 'POST',

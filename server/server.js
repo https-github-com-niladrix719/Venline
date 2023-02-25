@@ -29,10 +29,10 @@ app.get('/', (req, res) => {
 app.get('/cart', (req, res) => {
     res.render(path.join(__dirname, '../client', 'cart.ejs'));
 });
-/*app.get('/profile', (req, res) => {
+app.get('/profile', (req, res) => {
     res.render(path.join(__dirname, '../client', 'profile.ejs'));
 });
-/*app.get('/profile-seller', (req, res) => {
+app.get('/profile-seller', (req, res) => {
     res.render(path.join(__dirname, '../client', 'profile-seller.ejs'));
 });
 app.get('/order-confirmation', (req, res) => {
@@ -40,7 +40,7 @@ app.get('/order-confirmation', (req, res) => {
 });
 app.get('/checkout', (req, res) => {
     res.render(path.join(__dirname, '../client', 'checkout.ejs'));
-});*/
+});
 //Register user
 app.use('/api/consumer',userRoutes)
 //add to cart
