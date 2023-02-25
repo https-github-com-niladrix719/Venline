@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const Product = require('../models/ProductModel');
+const Product = require('../models/productmodel');
 
 // Controller function to get all products
 const getProducts = asyncHandler(async (req, res) => {
@@ -35,4 +35,4 @@ const createProduct = asyncHandler(async (req, res) => {
 });
 
 module.exports = { getProducts, getProductById, createProduct };
-exports.createProduct=createProduct
+
