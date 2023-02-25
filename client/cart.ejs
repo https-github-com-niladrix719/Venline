@@ -14,13 +14,14 @@
 </head>
 <body>
 
+    <%- include('include/navbar') %>
+
   <main>
     
     
     <div id="cart-heading">
       <h1 style="margin-left: 5px;">Items in your cart:</h1>
     </div>
-
     <div id="parent">
 
 
@@ -32,14 +33,14 @@
             <div class="product">
 
               <div class="product-image"> 
-                <img src="images/apple.png">
+                <img src="images/apple-min.png">
 
                 <div class="product-description">
 
                   <h3 class="product-name item-heading">Example Name</h3>
                   <div class="product-seller">Seller: Onkit</div>
                   <div class="product-stock">In Stock</div>
-                  <div class="remove"><i class="fa-solid fa-trash"></i></div>
+                  <div class="remove"><a href="..."><i class="fa-solid fa-trash"></i></a></div>
 
                 </div>
               </div>
@@ -70,14 +71,14 @@
             <div class="product">
 
               <div class="product-image"> 
-                <img src="images/tomato2.png">
+                <img src="images/tomato2-min.png">
 
                 <div class="product-description">
 
                   <h3 class="product-name item-heading">Example Name</h3>
                   <div class="product-seller">Seller: Onkit</div>
                   <div class="product-stock">In Stock</div>
-                  <div class="remove"><i class="fa-solid fa-trash"></i></div>
+                  <div class="remove"><a href="..."><i class="fa-solid fa-trash"></i></a></div>
 
                 </div>
               </div>
@@ -107,14 +108,14 @@
             <div class="product">
 
               <div class="product-image"> 
-                <img src="images/broccoli.png">
+                <img src="images/broccoli-min.png">
 
                 <div class="product-description">
 
                   <h3 class="product-name item-heading">Example Name</h3>
                   <div class="product-seller">Seller: Onkit</div>
                   <div class="product-stock">In Stock</div>
-                  <div class="remove"><i class="fa-solid fa-trash"></i></div>
+                  <div class="remove"><a href="..."><i class="fa-solid fa-trash"></i></a></div>
 
                 </div>
               </div>
@@ -177,7 +178,7 @@
             </div>
 
 
-            <button type="submit" id="order" onclick="location.href='checkout'"><i class="fa-solid fa-lock" style="padding-right: 10px; color: white;"></i>Checkout</button>
+            <button type="submit" id="order"><i class="fa-solid fa-lock" style="padding-right: 10px; color: white;"></i>Checkout</button>
 
         </div>
 
@@ -185,22 +186,12 @@
 
     </main>
 
+    <%- include('include/footer') %>
+
     <script type="text/javascript" src="javascript/cart.js"></script>
+    <script type="text/javascript" src="javascript/navbar.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
