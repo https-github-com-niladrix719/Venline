@@ -50,8 +50,6 @@ editbtn.addEventListener('click',editShow);
 
 //userdata
 
-let user = JSON.parse(localStorage.getItem('user'));
-
 document.getElementById('name').innerHTML = `<h1>${user.username}</h1>`;
 
 //edit profile
