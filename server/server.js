@@ -8,7 +8,7 @@ const userRoutes= require('./routes/userRoutes')
 const parse= require('body-parser')
 const { notfound, errorhandler } = require('./middlewares/errorHandler');
 const {authUser} = require('./controllers/Con_controller')
-//const seller= require('./routes/sellerRoute')
+const seller= require('./routes/sellerRoutes')
 dotenv.config()
 connectDb()
 const app = express();
@@ -44,7 +44,7 @@ app.get('/checkout', (req, res) => {
 //Register user
 app.use('/api/consumer',userRoutes)
 //add to cart
-//app.use('/api',seller)
+app.use('/api',seller)
 //middlewares for error Handling
 app.use(notfound)
 app.use(errorhandler)
