@@ -361,6 +361,7 @@ section{
 }
 
 #detect{
+	cursor: pointer;
 	display: flex;
 	flex-direction: row;
 	font-size: 1.1rem;
