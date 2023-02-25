@@ -25,101 +25,31 @@
 
                 <div id="location"><i style="color: red;" class="fa-solid fa-location-dot"></i> Kolkata</div>
 
-                <div id="reviews">
-                    <h5>Reviews</h5>
-                    <div class="ratings">
-                        <span>8.35</span>
-                        <div class="stars-outer">
-                            <div class="stars-inner"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div id="edit"><i class="fa-regular fa-pen-to-square"></i> Edit Profile</div>
         </div>
 
         <div id="navbox">
-            <button class="navboxes navcolor">My Products</button>
-            <button class="navboxes">Upload Product</button>
-            <button class="navboxes">Edit Profile</button>
-        </div>
-
-        <div class="box show" id="products">
-          <div id="cards">
-            <div class="card">
-                <img src="images/apple-min.png">
-                <div class="card-body">
-                <div class="name">Example Name</div>
-                <div class="description"><p>Lorem ipsumid est laborum.</p></div>
-                <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
-                <div class="price">Remove</div>
-                <div class="add2cart">Edit Product</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/tomato2-min.png">
-                <div class="card-body">
-                <div class="name">Example Name</div>
-                <div class="description"><p>Lorem ipsumid est laborum.</p></div>
-                <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
-                <div class="price">Remove</div>
-                <div class="add2cart">Edit Product</div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/broccoli-min.png">
-                <div class="card-body">
-                <div class="name">Example Name</div>
-                <div class="description"><p>Lorem ipsumid est laborum.</p></div>
-                <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
-                <div class="price">Remove</div>
-                <div class="add2cart">Edit Product</div>
-                </div>
-            </div>
-          </div> 
-        </div>
-
-        <div class="box" id="upload">
-            <form>
-                <h1>UPLOAD PRODUCT</h1>
-                <div class="inputs">
-                    <label for="productname">Name of Product</label><br>
-                    <input type="text" name="productname" id="productname">
-                </div>
-
-                <div class="inputs">
-                    <label for="description">Description</label><br>
-                    <textarea name="description" id="description"></textarea>
-                </div>
-
-                <div class="inputs">
-                    <label for="location">Location</label><br>
-                    <input type="text" name="location" id="location">
-                </div>
-
-                <div class="inputs">
-                    <button type="submit">Upload</button>
-                </div>
-            </form>
+            <button id="navboxes">Edit Profile</button>
         </div>
 
         <div class="box" id="editProducts">
             <form>
                 <h1>EDIT PROFILE</h1>
                 <div class="inputs">
-                    <label for="name">Name</label><br>
-                    <input type="text" name="name" id="name" value="Niladri Adhikary">
+                    <label for="name-edit">Name</label><br>
+                    <input type="text" name="name" id="name-edit">
                 </div>
 
                 <div class="inputs">
-                    <label for="phone">Phone</label><br>
-                    <input type="number" name="phone" id="phone" value="7001599126">
+                    <label for="phone-edit">Phone</label><br>
+                    <input type="number" name="phone" id="phone-edit">
                 </div>
 
                 <div class="inputs">
-                    <label for="email">Email</label><br>
-                    <input type="email" name="email" id="email" value="niladri@gmail.com">
+                    <label for="email-edit">Email</label><br>
+                    <input type="email" name="email" id="email-edit">
                 </div>
 
                 <div class="inputs">
@@ -128,13 +58,11 @@
                 </div>
 
                 <div class="inputs">
-                    <button type="submit">Save Changes</button>
+                    <button type="submit" id="save">Save Changes</button>
                 </div>
             </form>
         </div>
     </div>
-
-    <%- include('include/footer') %>
     
   <script type="text/javascript" src="javascript/profile.js"></script>  
 </body>
