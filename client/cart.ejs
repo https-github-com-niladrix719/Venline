@@ -1,0 +1,8 @@
+<h1>Cart</h1>
+<ul>
+  <% cart.items.forEach(item => { %>
+    <li>
+      <%= item.product.name %> - <%= item.quantity %> - <%= item.product.price %>
+    </li>
+  <% }) %>
+</ul>
