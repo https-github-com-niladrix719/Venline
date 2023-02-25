@@ -37,5 +37,11 @@ const consumerschema = mongoose.Schema({
         }
         const salt = await bcrypt.genSalt(10)
         this.password = await bcrypt.hash(this.password,salt)
+        const password=this.password
+        console.log(this.password)
+        console.log(this.email)
+        console.log(this.username)
     }
     )
+    module.exports = mongoose.model('User',consumerschema)
+    
