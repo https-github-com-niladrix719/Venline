@@ -193,10 +193,10 @@ input:focus {
 
 .seperation-line
 {
-	margin-top: 10px;
+	margin-top: 5px;
 	width: 98%;
 	border-top: 1.5px solid lightgrey;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 
 #total
