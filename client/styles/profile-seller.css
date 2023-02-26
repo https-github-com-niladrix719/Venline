@@ -371,9 +371,43 @@ textarea{
 
 /*-----orders-----*/
 
+#orders
+{
+	flex-direction: column;
+}
 
+#table
+{
+	background-color: #39b364;
+	display: flex;
+	justify-content: space-around;
+}
 
+#table h3
+{
+	text-align: center;
+	width: 20%;
+	font-size: 20px;
+	color: white;
+	margin: 0;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
 
+.details
+{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.details h4
+{
+	text-align: center;
+	width: 20%;
+	font-size: 15px;
+	color: black;
+}
 
 
 
