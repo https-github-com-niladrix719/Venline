@@ -23,7 +23,6 @@
   <main>
     
     <%- include('include/navbar') %>
-
     <section id="header">
         <div id="header-text">
             <h1>Get Food At Your Door Step At <span>Lowest Price</span>!</h1>
@@ -72,7 +71,7 @@
         </div>
       </div>
         <div id="cards">
-            <div class="card">
+            <!-- <div class="card">
                 <img src="images/apple-min.png">
                 <div class="card-body">
                 <div class="name">Example Name</div>
@@ -101,7 +100,19 @@
                 <div class="price">Rs. 50 / KG</div>
                 <div class="add2cart">Add to Cart</div>
                 </div>
+            </div> -->
+            <% for(i of products){ %>
+            <div class="card">
+                <img src="images/broccoli-min.png">
+                <div class="card-body">
+                <div class="name"><%= i.name %></div>
+                <div class="description"><p><%= i.description %></p></div>
+                <div class="rating">5.0 <i class="fa-solid fa-star"></i></div>
+                <div class="price">Rs. <%= i.price %> / KG</div>
+                <div class="add2cart">Add to Cart</div>
+                </div>
             </div>
+            <% } %>
         </div>
     </section>
 
