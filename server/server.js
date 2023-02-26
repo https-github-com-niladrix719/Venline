@@ -10,6 +10,7 @@ const { notfound, errorhandler } = require('./middlewares/errorHandler');
 const {authUser} = require('./controllers/Con_Controller')
 const{ getProducts}=require('./controllers/product_controller')
 const seller= require('./routes/sellerRoute')
+const Product = require('./models/productmodel');
 dotenv.config()
 connectDb()
 const app = express();
@@ -25,7 +26,15 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 // Route for the pages
 app.get('/', (req, res) => {
-    res.render(path.join(__dirname, '../client', 'index.ejs'));
+    Product.find({}, function(err, products){
+        if(err){
+            console.log('error!');
+            return;
+        }
+        res.render(path.join(__dirname, '../client', 'index.ejs'),{
+            products : products
+        });
+    });
 });
 app.get('/cart', (req, res) => {
     res.render(path.join(__dirname, '../client', 'cart.ejs'));

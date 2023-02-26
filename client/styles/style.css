@@ -1,6 +1,7 @@
 /*body*/
 
 body{
+	padding-top: 20px;
 	margin: 0;
 	font-family: 'Lato', sans-serif;
 }
@@ -168,6 +169,7 @@ section{
 	border: 1px solid black;
 	color: #696969;
 	cursor: pointer;
+	transition: 0.2s ease-in-out;
 }
 
 #header-text button:hover{
@@ -361,6 +363,7 @@ section{
 }
 
 #detect{
+	cursor: pointer;
 	display: flex;
 	flex-direction: row;
 	font-size: 1.1rem;

@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Profile</title>
+	<title>Seller Profile</title>
 	<script src="https://kit.fontawesome.com/9b7f16bc1d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles/global.css">
 	<link rel="stylesheet" type="text/css" href="styles/profile-seller.css">
@@ -12,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <%- include('include/navbar') %>
 
     <div id="profile-page">
     	<div id="header">
@@ -43,6 +46,7 @@
     		<button class="navboxes navcolor">My Products</button>
     		<button class="navboxes">Upload Product</button>
     		<button class="navboxes">Edit Profile</button>
+            <button class="navboxes">Orders</button>
     	</div>
 
     	<div class="box show" id="products">
@@ -82,7 +86,7 @@
 
     	<div class="box" id="upload">
     		<form>
-                <h1>UPLOAD PRODUCT</h1>
+                <h1 class="head">UPLOAD PRODUCT</h1>
                 <div class="inputs">
                     <label for="productname">Name of Product</label><br>
                     <input type="text" name="productname" id="productname" required>
@@ -114,7 +118,7 @@
 
     	<div class="box" id="editProducts">
     		<form>
-    			<h1>EDIT PROFILE</h1>
+    			<h1 class="head">EDIT PROFILE</h1>
     			<div class="inputs">
     		        <label for="name-edit">Name</label><br>
     		        <input type="text" name="name" id="name-edit">
@@ -140,8 +144,24 @@
     		    </div>
             </form>
     	</div>
+
+        <div class="box" id="orders">
+            <h1>Orders</h1>
+            <div class="details">
+                <div class="up">
+                    <div class="username">Ankit</div>
+                    <div class="phn-no">1234567899</div>
+                </div>
+                <div class="dropdown">
+                    
+                </div>
+            </div>
+        </div>
     </div>
-    
-  <script type="text/javascript" src="javascript/profile-seller.js"></script>  
+
+    <%- include('include/footer') %>
+
+    <script type="text/javascript" src="javascript/navbar.js"></script>
+    <script type="text/javascript" src="javascript/profile-seller.js"></script>
 </body>
 </html>
