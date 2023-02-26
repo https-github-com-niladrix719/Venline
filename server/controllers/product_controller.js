@@ -9,7 +9,8 @@ const getProducts = asyncHandler(async (req, res) => {
 
 // Controller function to get a single product by ID
 const getProductById = asyncHandler(async (req, res) => {
-  const product = await Product.findById(req.params.id);
+  const{name}=req.body
+  const product = await Product.findOne({name});
 
   if (product) {
     res.json(product);
@@ -21,13 +22,14 @@ const getProductById = asyncHandler(async (req, res) => {
 
 // Controller function to create a new product
 const createProduct = asyncHandler(async (req, res) => {
-  const { name, description, price, image } = req.body;
+  const { name, description, price, image,sellername } = req.body;
 
   const product = new Product({
     name,
     description,
     price,
-    image
+    image,
+    sellername
   });
 
   const createdProduct = await product.save();
