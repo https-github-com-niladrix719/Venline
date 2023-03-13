@@ -23,6 +23,6 @@ form.addEventListener('submit',function(event){
     }).then(response => response.json())
     .then(createdUser => {
         console.log(createdUser)
-        window.location.href = "http://localhost:3000/profile-seller.html"
+        window.location.href = "http://localhost:3000"
     })
 })
