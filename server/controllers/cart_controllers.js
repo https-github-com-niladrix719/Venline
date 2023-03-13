@@ -1,43 +1,40 @@
-const asyncHandler= require('express-async-handler');
-const User=require("../models/ConsumerModel");
-const Cart= require("../models/cartmodel");
-const Product=require("../models/productmodel");
+const asyncHandler = require('express-async-handler');
+const User = require('../models/ConsumerModel');
+const Product = require('../models/productmodel');
+const Cart = require('../models/cartmodel');
 
-const addToCart = asyncHandler(async(req,res) => {
-  const { user, items } = req.body;
-  let userExists = await User.findOne({ _id: user });
-  if(userExists){
-       
+// create cart for a user
+const createCart = asyncHandler(async (req, res) => {
+  const { username, productName } = req.body;
+
+  // find the user by username
+  const user = await User.findOne({ username });
+
+  if (!user) {
+    res.status(404);
+    throw new Error('User not found');
   }
 
-  if (!cartModel) {
-    cartModel = new Cart({ user: userId, items: [] });
+  // find the product by name
+  const product = await Product.findOne({ name: productName });
+
+  if (!product) {
+    res.status(404);
+    throw new Error('Product not found');
   }
 
-  const cartItem = cartModel.items.find(item => item.productId.toString() === productId);
+  // create a new cart for the user
+  const cart = new Cart({
+    user: user._id,
+    products: [{
+      product: product._id,
+      quantity: 1 // you can set the quantity as required
+    }]
+  });
 
-  if (cartItem) {
-    cartItem.quantity += quantity;
-    cartItem.price += quantity * cartItem.price;
-  } else {
-    const product = await Product.findOne({ _id: productId });
+  // save the cart to the database
+  const savedCart = await cart.save();
 
-    if (product) {
-      cartModel.items.push({
-        productId: product._id,
-        quantity,
-        price: product.price
-      });
-    } else {
-      res.status(400);
-      throw new Error("Product not found");
-    }
-  }
-
-  await cartModel.save();
-
-  res.status(200).json({ message: "Cart Updated" });
+  res.status(201).json(savedCart);
 });
-
-module.exports = { addToCart };
-exports.addToCart = addToCart;
+module.exports={createCart}

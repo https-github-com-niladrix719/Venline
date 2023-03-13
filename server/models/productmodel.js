@@ -17,8 +17,12 @@ const productSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  sellername:{
+    type: String,
+    required: true
+  },
   image: {
-    type: Buffer,
+    type: String,
     required: true
   }
 });
